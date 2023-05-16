@@ -9,11 +9,12 @@ $user_logged = false;
 <html>
 
 <head>
-	<title>Online Job Portal</title>
+	<title>Online Job Offer</title>
 	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 	<!-- Latest compiled and minified CSS -->
 	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
+    <link rel="shortcut icon" href="https://pluspng.com/img-png/png-user-icon-icons-logos-emojis-users-2400.png" type="image/x-icon">
 	<link rel="stylesheet" href="<?php echo $server; ?>css/style.css">
 
 	<!-- Latest compiled and minified JavaScript -->
@@ -38,7 +39,7 @@ $user_logged = false;
 			<div class="navbar-collapse collapse justify-content-between">
 				<ul class="navbar-nav" id="navbar">
 					<li class="nav-item active">
-						<a class="nav-link text-dark" href="<?php echo $server; ?>index.php"><i class="fa fa-id-badge text-dark"></i> GenesJob</a>
+						<a class="nav-link text-dark" href="<?php echo $server; ?>index.php"><i class="fa fa-id-badge text-dark"></i> Jobs Page</a>
 					</li>
 
 					<?php if (isset($_SESSION['loggedin']) && $_SESSION['loggedin'] == true) {
@@ -58,12 +59,6 @@ $user_logged = false;
 					</div>
 				</ul>
 				<ul class="navbar-nav">
-					<li class="nav-item save mr-4">
-						<a class="nav-link btn bg-warning" href="<?php echo $server; ?>templates/save.php">
-							<span class="text-white">0 </span>
-							<i class="fa fa-heart text-white" style="font-size: 18px;"></i>
-						</a>
-					</li>
 
 					<?php
 					if ($user_logged) { ?>

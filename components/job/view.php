@@ -23,7 +23,7 @@ $res = mysqli_query($connection, $ReadSql);
 			<h2>Willy - Jobs</h2>
 			<a href="add.php"><button type="button" class="btn btn-primary ml-4 pl-2">Add New</button></a>
 		</div>
-		<table class="table "> 
+		<table class="table ">
 		<thead> 
 			<tr> 
 				<th>Job No.</th> 
@@ -38,17 +38,17 @@ $res = mysqli_query($connection, $ReadSql);
 		while($r = mysqli_fetch_assoc($res)){
 		?>
 			<tr> 
-				<th scope="row"><?php echo FCFAr['id']; ?></th>
-				<td><?php echo FCFAr['title']; ?></td>
-				<td>$ <?php echo FCFAr['salary']; ?></td>
-				<td><?php echo FCFAr['company']; ?></td>
+				<th scope="row"><?php echo $r['id']; ?></th>
+				<td><?php echo $r['title']; ?></td>
+				<td>FCFA <?php echo $r['salary']; ?></td>
+				<td><?php echo $r['company']; ?></td>
 				<td>
-					<a href="update.php?id=<?php echo FCFAr['id']; ?>"><button type="button" class="btn btn-info">Edit</button></a>
+					<a href="update.php?id=<?php echo $r['id']; ?>"><button type="button" class="btn btn-info">Edit</button></a>
 
-					<button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<?php echo FCFAr['id']; ?>">Delete</button>
+					<button type="button" class="btn btn-danger btn-xs" data-toggle="modal" data-target="#myModal<?php echo $r['id']; ?>">Delete</button>
 
 					<!-- Modal -->
-					  <div class="modal fade" id="myModal<?php echo FCFAr['id']; ?>" role="dialog">
+					  <div class="modal fade" id="myModal<?php echo $r['id']; ?>" role="dialog">
 					    <div class="modal-dialog">
 					    
 					      <!-- Modal content-->
@@ -64,7 +64,7 @@ $res = mysqli_query($connection, $ReadSql);
 					        </div>
 					        <div class="modal-footer">
 					          <button type="button" class="btn btn-default" data-dismiss="modal">Cancel</button>
-					          <a href="delete.php?id=<?php echo FCFAr['id']; ?>"><button type="button" class="btn btn-danger"> Yes, Delete</button></a>
+					          <a href="delete.php?id=<?php echo $r['id']; ?>"><button type="button" class="btn btn-danger"> Yes, Delete</button></a>
 					        </div>
 					      </div>
 					      

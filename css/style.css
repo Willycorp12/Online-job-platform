@@ -67,7 +67,7 @@ header {
 }
 
 .company {
-	text-decoration-line: underline;
+	text-decoration: underline;
 }
 
 .btn-checkout span, .btn-checkout .fa-remove{

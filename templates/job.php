@@ -12,18 +12,18 @@
 				<!-- Button apply jobs -->
 				<button type="button" class="btn apply-button"
 					data-pid="<?php echo $r['id']; ?>"
-					data-target="#applyModal" data-toggle="modal">
+					data-target="#applyModal<?php echo $r['id']; ?>" data-toggle="modal">
 					<span class="text-white">
 						Apply
 					</span>
 				</button>
 
 				<!-- Modal -->
-				<div class="modal fade" id="applyModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
+				<div class="modal fade" id="applyModal<?php echo $r['id']; ?>" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenteredLabel" aria-hidden="true">
 					<div class="modal-dialog modal-dialog-centered" role="document">
 						<div class="modal-content">
 							<div class="modal-header">
-								<h5 class="modal-title" id="exampleModalCenteredLabel">Apply to this job</h5>
+								<h5 class="modal-title" id="exampleModalCenteredLabel">Apply to this job - <?php echo $r['title']; ?></h5>
 								<button type="button" class="close" data-dismiss="modal" aria-label="Close">
 								<span aria-hidden="true">&times;</span>
 								</button>

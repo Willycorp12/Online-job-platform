@@ -17,21 +17,6 @@ if(isset($_POST) & !empty($_POST)){
 	$detail = ($_POST['description']);
 	$salary = ($_POST['salary']);
 	$company = ($_POST['company']);
-
-	// store n upload image
-    $image = $_FILES['image']['name'];
-    $dir="../img/products/";
-    $temp_name=$_FILES['image']['tmp_name'];
-    if($image!="")
-    {
-        if(file_exists($dir.$image))
-        {
-           $image= time().'_'.$image;
-        }
-        $fdir= $dir.$image;
-        move_uploaded_file($temp_name, $fdir);
-    }
-
     // Execute query
 	$query = "INSERT INTO `jobs` (title, description, salary, company) VALUES ('$title', '$detail', '$salary', '$company')";
 	$res = mysqli_query($connection, $query);

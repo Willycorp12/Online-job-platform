@@ -7,7 +7,7 @@ session_start();
 <?php require('templates/header.php') ?>
 	<div class="d-flex mt-4 mx-4">
         <h3>Welcome to Online Job Portal,
-        	<b><?php // check user login and output username
+        	<b><?php
 			if ($user_logged) {
 				$user_id = ($_SESSION['id']);
 				$select_sql = "SELECT name FROM `users` WHERE id='$user_id'";
